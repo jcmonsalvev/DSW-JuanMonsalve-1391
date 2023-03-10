@@ -1,0 +1,88 @@
+header{
+    color: black;
+    background-color:lightgrey;
+    padding: 20px;
+    font-size: large;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.menu-area a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    background:lightblue;
+    height: 50px;
+    text-decoration: none;
+}
+
+.menu-area a:hover {
+    background:lightgray;
+    color: #000;
+
+}
+
+.menu-area ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-area li {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-area li:hover .dropdown-1>li {
+    top: 0;
+    display: block;
+}
+
+.dropdown-1 li {
+    display: none;
+    position: relative;
+}
+
+.dropdown-1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dropdown-1 li:hover {
+    display: block;
+}
+section{
+    float: left;
+    width: 70%;
+    height: auto;
+    padding: 10px;;
+    color: black;
+    background-color: white;
+    font-size: 100%;
+}
+
+aside{
+    float: left;
+    width: 30%;
+    color: #000;
+    background-color: white;
+}
+
+footer{
+    color: black;
+    background-color: lightgrey;
+    padding: 10px;;
+}
+.contenedor::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}

@@ -12,44 +12,122 @@
 <body>
 
     <header>
-        <a href="index.html"><img src="Img/logo.png" border="0"></a>
+        <a href=" "><img src="Img/logo2.png" border="0"></a>
         </a>
     </header>
     <nav class="menu-area">
         <ul>
-            <li> <a href="index.html"><img src="Img/inicio.png" alt=""></a> </li>
-            <li><a href=""><img src="Img/temas.png" alt=""></a>
+            <li> <a href="index.html"> INICIO </a> </li>
+            <li><a href="audios.html"> AUDIOS </a>
                 <ul class="dropdown-1">
-                    <li><a href="Tema1.html"><img src="Img/Tema1.png" alt=""></a></li>
-                    <li><a href="Tema2.html"><img src="Img/Tema2.png" alt=""></a></li>
+                    <li><a href="audios.html">AUDIO 1</a></li>
                 </ul>
             </li>
-            <li><a href="#"><img src="Img/recursos.png" alt=""></a>
-                <ul class="dropdown-1">
-                    <li> <a href="Recurso1.html"><img src="Img/recurso1.png" alt=""></a> </li>
-                    <li><a href="Recurso2.html"><img src="Img/recurso2.png" alt=""></a></li>
-                </ul>
-            </li>
-            <li><a href="Autor.html"><img src="Img/autor.png" alt=""></a></li>
+            <li><a href="Autores.html"> NOSOTROS </a></li>
         </ul>
     </nav>
-    <div class="contenedor">
-        <section>
-            <article>
-                <iframe width="900" height="450" src="PDF/LA INTERFAZ DE USUARIO.pdf" frameborder="0"></iframe>
+    <div class="container">
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="audios.html">Audio del tema</a></li>
+            <li><a href="Tema.html">Tema </a></li>
+            <li> <a href="Autores.html">Nosotros </a></li>
+          </ul>
+        </nav>
+        <main class="main">
+            <h1>Selectores CSS </h1> 
+            <article> <br>
+                <p>Los selectores CSS son patrones que permiten seleccionar y manipular elementos HTML dentro de una página web. Con ellos, podemos aplicar estilos a diferentes partes de la página, desde etiquetas específicas hasta elementos con ciertas clases o atributos. Entender cómo funcionan los selectores es una habilidad fundamental para cualquier desarrollador web. <br> 
+                   <br>
+                    <h2> OBJETIVOS</h2>
+                    <br>
+                    <li>Comprender la importancia de los selectores CSS y cómo se utilizan para aplicar estilos a los elementos HTML.</li>
+                    <br>
+                    <li>Aprender los diferentes tipos de selectores y cómo combinarlos.</li> 
+                    <br>
+                    <li>Conocer las características y limitaciones de los selectores CSS.</li>
+                    <br>
+                    <li>Identificar y aplicar buenas prácticas en el uso de selectores CSS.</li>
+                </p> <br> 
+                <h2>TIPOS DE SELECTORES</h2>
+                <h3>Selectores de tipo</h3>
+                <br>
+                <p>"Los selectores de tipo se aplican a todos los elementos de un tipo específico. Por ejemplo, para seleccionar todos los párrafos ( < p >) y aplicarles un estilo: <br>
+                  <br>
+                    p { <br>
+                      color: red; <br>
+                    }</p>
+                    <br>
+                <h3>Selectores de clase</h3>
+                <br>
+                <p>Los selectores de clase se aplican a los elementos que tienen un atributo class que coincide con el nombre de la clase especificada. Por ejemplo, para seleccionar todos los elementos con la clase "destacado": <br>
+                    <br>
+                    .destacado { <br>
+                        background-color: yellow;<br>
+                      } </p>
+                      <br>
+                <h3>Selectores de ID</h3>
+                <p>Los selectores de ID se aplican a un elemento único que tiene un atributo id que coincide con el ID especificado. Es importante recordar que los ID deben ser únicos en una página. <br>
+                <br>
+                #titulo-principal {<br>
+                    font-size: 24px;<br>
+                  }</p>
+                  <br>
+                <h3>Selectores de atributo</h3>
+                <br>
+                <p>Los selectores de atributo seleccionan elementos que tienen un atributo específico o que cumplen ciertas condiciones con respecto a sus atributos. <br>
+                <br>
+                /* Selecciona todos los elementos con el atributo "data-info" */ <br>
+                [data-info] { <br>
+                  border: 1px solid blue; <br>
+                } <br>
+                /* Selecciona todos los enlaces que apuntan a sitios externos */ <br>
+                a[href^="http://"], a[href^="https://"] { <br>
+                      color: red; <br>
+                    } </p>       
+                     <br>   
+                <h3>Selectores de pseudo-clase y pseudo-elementos</h3> 
+                <br>
+                <p>Las pseudo-clases y pseudo-elementos permiten seleccionar elementos en base a su estado o posición en el documento. <br>
+                <br>
+                /* Selecciona todos los elementos \<p> cuando el mouse está sobre ellos */ <br>
+                    p:hover { <br>
+                      background-color: lightblue; <br>
+                    } <br>
+                <br>
+                /* Selecciona el primer carácter de cada elemento \< p > */
+                    p::first-letter {
+                      font-size: 2em;
+                    } </p>
+                    <br>
+                <h3>Combinación de selectores</h3>
+                <br>
+                <p>Los selectores pueden combinarse para crear selectores más específicos o complejos. <br>
+                    /* Selecciona todos los elementos \< li> que son hijos directos de un elemento \< ul> con clase "menu" */ <br>
+                        ul.menu > li { <br>
+                          display: inline;
+                        }
+                    <br>
+                    /* Selecciona todos los elementos \< p> con clase "destacado" y "resaltado" */ <br>
+                        p.destacado.resaltado { <br>
+                          font-weight: bold; <br>
+                        } </p>
+                        <br>
+                <h2>Buenas prácticas</h2>
+                <br>
+                <li>1.Evite el uso excesivo de selectores de ID. Los selectores de clase suelen ser suficientes y más flexibles.</li> <br>
+                <li>2.No anide demasiados selectores, ya que esto puede dificultar la lectura y mantenimiento del código.</li> <br>
+                <li>3.Utilice nombres de clase y ID descriptivos y siga una convención de nombres consistente.</li>
+            <br>
+                <p>Los selectores CSS son fundamentales para aplicar estilos a los elementos de una página web. Hay diversos tipos de selectores, como selectores de tipo, clase, ID, atributo, pseudo-clases y pseudo-elementos. Combinar selectores permite seleccionar elementos con mayor especificidad y complejidad. Es importante seguir buenas prácticas y mantener el código CSS fácil de leer y mantener. Dominar los selectores CSS mejorará su capacidad para diseñar y estilizar sitios web de manera eficiente y efectiva.</p>
             </article>
-        </section>
-        <aside>
-            <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width="340" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </aside>
-    </div>
+            <br>
+        </main>
+      </div>
     <footer>
         <ul> <center>
-            <h6>camilo.mova@outlook.com <br> Skype: camilo.mova_1 <br> 12/03/2021</h6>
+            <h6>camilo.mova@outlook.com <br> Skype: camilo.mova_1 <br> 10/04/2023</h6>
         </center>
           </ul>
           
